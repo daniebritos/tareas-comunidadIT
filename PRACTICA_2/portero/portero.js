@@ -11,7 +11,7 @@
 
 let numerate = 0;
 let contador = 0;
-let valMemory;
+let valMemory = 0;
 function pulsar(num) { //recorro botones con asignados con pulsar()
     for(i in num.value) {
         if(num.value[i] === '1') {
@@ -52,15 +52,18 @@ function pulsar(num) { //recorro botones con asignados con pulsar()
             document.getElementById('dpto').value = numerate;
         }
     }
+    
 }
 
 function borrar() {
     document.getElementById('piso').value = '';
     document.getElementById('dpto').value = '';
     document.getElementById('display').value = '';
+    numerate = 0;
+    contador = 0;
+    valMemory = 0;
 }
 function llamar() {
     document.getElementById('display').value = `Llamando piso: ${valMemory}, DPTO: ${numerate}`;
 }
-
 
